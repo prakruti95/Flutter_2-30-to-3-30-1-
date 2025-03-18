@@ -1,0 +1,50 @@
+Operators:
+1)Arithmetic Op
+=> +,-,*,/,%
+2)Assignment Op
+=
+3)comparision Op
+==
+4)shorthand Op
++=,-=,*=,/=,%=
+
+5)Relational Op
+<,>,<=,>=,==,!=
+==================================================
+
+a=b//assign the value
+a==b//comparision
+
+a=5
+
+a+=b -> a=a+b
+
+b*=a -> b=b*a
+
+c=a+b
+a=a+b
+
+dart - no need to define return type
+
+UserInput
+condition check
+if,else if,else
+switch ,case
+
+
+->perform the task using C Language
+->printf("prakruti");
+->output:prakruti8
+
+terms & condition:
+do not use
+1)loop
+2)condition
+3)function
+4)pointer
+5)do not declare any variable
+
+
+
+
+
