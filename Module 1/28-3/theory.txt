@@ -1,0 +1,18 @@
+Keywords:
+static
+this
+super
+final
+
+local variable
+global variable
+
+Inheritance: 
+
+Types of Inheritance:
+
+1)Single 
+2)Multilevel
+3)Multiple
+4)Hierarchical
+5)Hybrid
