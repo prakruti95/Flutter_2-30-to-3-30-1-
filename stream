@@ -1,0 +1,65 @@
+Streams Dart ane Flutter ma ek powerful concept chhe, je asynchronous data ne sequence ma handle kare chhe — matlab ke data ek pachi ek ave chhe, ane tame ene real-time ma process kari sako chho.
+
+🔹 Simple Definition (Gujarati ma):
+Stream e ek aavi vastu chhe je time pr data mokle chhe, ane tame ena data ne ek ek karke receive karo chho.
+
+Tame ema subscribe thai sako chho, ane jyare pan navo data ave, tame ene use kari sako chho.
+
+🔹 Real Life Example:
+Maano ke tamaro YouTube Live Video chalu chhe.
+
+Tamne video data ek sath na male — thodathoda time pachi aave (buffer thayi ne).
+
+Aa data continuous stream ma aave chhe.
+
+Tame video joy rahiya chho, etle tame "stream" ne listen karo chho.
+
+🔹 Dart/Flutter ma Example:
+dart
+Copy
+Edit
+// Stream create kariye je 1 second pachi 1 number emit kare
+Stream<int> numberStream() async* {
+  for (int i = 1; i <= 5; i++) {
+    await Future.delayed(Duration(seconds: 1)); // 1 second wait
+    yield i; // emit number
+  }
+}
+
+void main() {
+  // stream listen karvu
+  numberStream().listen((value) {
+    print("Received: $value");
+  });
+}
+🔸 Output:
+
+yaml
+Copy
+Edit
+(1 second pachi) Received: 1  
+(2 seconds pachi) Received: 2  
+(3 seconds pachi) Received: 3  
+...
+🔹 Key Concepts:
+Concept	Explanation
+Stream	Data no flow je time pr aave
+async*	Function je stream return kare
+yield	Stream ma value emit kare
+listen()	Stream ne observe kare ane data receive kare
+🔹 Stream Types:
+Single-subscription stream – ek vakhat listen kari sako.
+
+Broadcast stream – ek thi vadhu jagyae thi listen kari sako.
+
+Aama tame koi sensor data, API updates, user input continuously stream karva use kari sako.
+
+Jova mangta ho to hu Flutter UI example pan aapu jya stream ne UI ma bind kariye. Kahu?
+
+
+
+
+
+
+
+
