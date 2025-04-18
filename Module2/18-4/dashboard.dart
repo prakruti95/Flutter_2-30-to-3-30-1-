@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:loginform/main.dart';
 
@@ -12,6 +11,15 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen>
 {
+
+  List images =
+  [
+    "assets/burger.png",
+    "assets/coffee.png",
+    "assets/pizza.png",
+    "assets/soda.png",
+  ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -31,7 +39,26 @@ class _DashboardScreenState extends State<DashboardScreen>
                   //Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => MyApp()));
                 }, icon: Icon(Icons.logout),color: Colors.white,)
             ],
-          )
+          ),
+      body:
+      Center
+        (
+          child: GridView.builder
+            (
+              itemCount: images.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
+                (
+                  crossAxisCount: 3
+                ),
+              itemBuilder: (context,index)
+              {
+                  return ListTile
+                    (
+                         title: Image.asset(images[index]),
+                    );
+              }
+            ),
+        ),
 
 
     );
